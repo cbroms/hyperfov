@@ -1,0 +1,16 @@
+{
+  "name": "hyperfov-extension",
+  "version": "1.0.0",
+  "description": "",
+  "index": "src/mainfest.json",
+  "scripts": {
+    "setup": "cp node_modules/webextension-polyfill/dist/browser-polyfill.min.js src/browser-polyfill.min.js",
+    "dev": "npm run setup && web-ext run -s src"
+  },
+  "author": "Christian Broms",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "web-ext": "^6.6.0",
+    "webextension-polyfill": "^0.8.0"
+  }
+}
