@@ -12,5 +12,5 @@
       "js": ["browser-polyfill.min.js", "content.js"]
     }
   ],
-  "permissions": ["webNavigation"]
+  "permissions": ["webNavigation", "history", "tabs"]
 }
