@@ -78,6 +78,11 @@ const setupListeners = async () => {
         await post(`/tabs/new`, e)
     })
 
+    browser.tabs.onActivated.addListener(async (e) => {
+        console.log(`HYPERFOV >> logging tab ${e.id} active`)
+        await post(`/tabs/active`, e)
+    })
+
     // get the current page's tab state
     console.log(`HYPERFOV >> logging tab state`)
     const tabs = await browser.tabs.query({})
